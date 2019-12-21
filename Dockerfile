@@ -13,6 +13,7 @@ RUN composer require fof/default-user-preferences
 RUN composer require fof/formatting
 RUN composer require fof/transliterator
 RUN composer require fof/user-directory
+RUN composer require reflar/cookie-consent
 
 RUN rm /etc/nginx/sites-enabled/default
 COPY ./nginx/php.conf /etc/nginx/php.conf
