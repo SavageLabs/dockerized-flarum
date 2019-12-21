@@ -6,13 +6,13 @@ services:
     container_name: flarum-service
     ports:
       - "3025:80"
-    # links:
-    #   - database # link this service to the database service
-    # depends_on:
-    #   - database
+    links:
+      - database # link this service to the database service
+    depends_on:
+      - database
 
-#   database: # name of the service
-#     image: mariadb # specify image to build container from
-#     container_name: flarum-database
-#     env_file: 
-#         - db.env
+  database: # name of the service
+    image: mariadb # specify image to build container from
+    container_name: flarum-database
+    env_file: 
+        - db.env
